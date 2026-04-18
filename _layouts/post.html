@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<div class="page-content">
+    <article style="max-width: 800px; margin: 0 auto;">
+        <header style="text-align: center; margin-bottom: 3rem;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem; background: linear-gradient(45deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">{{ page.title }}</h1>
+            
+            <div style="color: #666; font-size: 1.1rem; margin-bottom: 1rem;">
+                📅 {{ page.date | date: "%B %d, %Y" }}
+                {% if page.tags.size > 0 %}
+                <br>
+                🏷️ 
+                {% for tag in page.tags %}
+                    <span style="background: #ff6b9d; color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.9rem; margin: 0 3px;">{{ tag }}</span>
+                {% endfor %}
+                {% endif %}
+            </div>
+            
+            {% if page.description %}
+            <p style="font-size: 1.2rem; color: #555; font-style: italic;">{{ page.description }}</p>
+            {% endif %}
+        </header>
+
+        <div style="line-height: 1.8; font-size: 1.1rem;">
+            {{ content }}
+        </div>
+
+        <footer style="margin-top: 4rem; padding: 2rem; background: linear-gradient(135deg, #ffeaa7, #fab1a0); border-radius: 20px; text-align: center;">
+            <h3 style="margin-bottom: 1rem; color: #333;">Thanks for Reading!</h3>
+            <p style="margin-bottom: 1.5rem; color: #555;">Did you enjoy this post? I'd love to hear what you think!</p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="{{ '/contact' | relative_url }}" style="background: #ff6b9d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: 600;">Send Me a Message</a>
+                <a href="YOUR_SQUARE_ONLINE_STORE_LINK_HERE" target="_blank" style="background: #667eea; color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: 600;">Shop My Lip Glosses</a>
+            </div>
+        </footer>
+    </article>
+
+    <section style="margin-top: 4rem; text-align: center;">
+        <h3 style="margin-bottom: 2rem;">Read More Blog Posts</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            {% assign related_posts = site.posts | where_exp: "post", "post.url != page.url" | limit: 3 %}
+            {% for post in related_posts %}
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; border-left: 5px solid #ff6b9d;">
+                <h4 style="margin-bottom: 0.5rem;"><a href="{{ post.url | relative_url }}" style="color: #333; text-decoration: none;">{{ post.title }}</a></h4>
+                <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">{{ post.date | date: "%B %d, %Y" }}</p>
+                <p style="font-size: 0.95rem;">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                <a href="{{ post.url | relative_url }}" style="color: #ff6b9d; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Read more →</a>
+            </div>
+            {% endfor %}
+            
+            {% if site.posts.size <= 1 %}
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; text-align: center; grid-column: 1 / -1;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">📝</div>
+                <p style="color: #666;">More blog posts coming soon! I'm working on lots of exciting content to share with you.</p>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+</div>
