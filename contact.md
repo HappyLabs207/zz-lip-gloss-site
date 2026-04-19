@@ -52,7 +52,7 @@ description: "Get in touch with ZZ's Lip Gloss Co. - we'd love to hear from you!
             
             <div style="background: linear-gradient(135deg, #ffeaa7, #fab1a0); padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
                 <h4 style="margin-bottom: 1rem; color: #333;">📧 Email</h4>
-                <p>hello@lilasgloss.com</p>
+                <p>hello@zzsgloss.com</p>
                 <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">I check my email every day after school!</p>
             </div>
             
