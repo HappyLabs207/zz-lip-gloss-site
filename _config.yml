@@ -1,8 +1,8 @@
 # Site settings
 title: "ZZ's Lip Gloss Co."
 description: "Handcrafted lip glosses made with love by an 8-year-old entrepreneur"
-baseurl: ""
-url: "https://ZZlipgloss.com"
+baseurl: "/zz-lip-gloss-site"
+url: "https://happylabs207.github.io"
 
 # Build settings
 markdown: kramdown
