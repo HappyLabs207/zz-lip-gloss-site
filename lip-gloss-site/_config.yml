@@ -1,0 +1,39 @@
+# Site settings
+title: "ZZ's Lip Gloss Co."
+description: "Handcrafted lip glosses made with love by an 8-year-old entrepreneur"
+baseurl: ""
+url: "https://ZZlipgloss.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Navigation
+header_pages:
+  - about.md
+  - products.md
+  - contact.md
+  - blog.html
+
+# Social (optional)
+social:
+  - platform: instagram
+    username: zzlipgloss
+
+# Collections
+collections:
+  products:
+    output: true
+    permalink: /:collection/:name/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
