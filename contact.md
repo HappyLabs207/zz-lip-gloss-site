@@ -59,7 +59,7 @@ description: "Get in touch with ZZ's Lip Gloss Co. - we'd love to hear from you!
             <div style="background: linear-gradient(135deg, #ff9a9e, #fad0c4); padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
                 <h4 style="margin-bottom: 1rem; color: #333;">📱 Social Media</h4>
                 <p>Follow my journey on Instagram!</p>
-                <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">@lilasgloss (coming soon!)</p>
+                <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">@zzsgloss (coming soon!)</p>
             </div>
             
             <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 2rem; border-radius: 15px;">
